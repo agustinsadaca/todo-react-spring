@@ -1,11 +1,13 @@
-package com.example.demo.modelo;
+package com.example.demo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="todo")
 public class Todo {
 
     @Id
@@ -13,14 +15,17 @@ public class Todo {
     private Long id;
     private String task;
     private boolean done;
+    private Long id_folder;
 
-    protected Todo() {
+   
+	protected Todo() {
 
     }
-    public Todo(long id, String task, boolean done) {
+    public Todo(long id, String task, boolean done,Long id_folder ) {
         this.id = id;
         this.task = task;   
         this.done = done;
+        this.id_folder=id_folder;
     }
 
     public void setId(Long id) {
@@ -36,6 +41,10 @@ public class Todo {
     public void setDone(boolean done) {
         this.done = done;
     }
+    
+    public void setId_folder(Long id_folder) {
+		this.id_folder = id_folder;
+	}
 
     public Long getId() {
         return id;
@@ -51,17 +60,10 @@ public class Todo {
     public boolean isDone() {
         return done;
     }
+    
+    public Long getId_folder() {
+		return id_folder;
+	}
+	
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Todo todo = (Todo) o;
-//        return id == todo.id;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(id);
-//    }
 }

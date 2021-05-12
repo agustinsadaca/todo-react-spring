@@ -1,13 +1,13 @@
-package com.example.demo.modelo;
-import com.example.demo.modelo.TodoRepository;
-import com.example.demo.modelo.Todo;
-
+package com.example.demo.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Todo;
+import com.example.demo.model.TodoRepository;
 
 @Service
 public class TodoService {

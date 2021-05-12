@@ -1,4 +1,4 @@
-package com.example.demo.modelo;
+package com.example.demo.controllers;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.model.Todo;
+import com.example.demo.service.TodoService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
