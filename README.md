@@ -24,18 +24,18 @@ Dowload nome_modules
 Inside directory 'todo-react-spring'  execute
 command:    npm i 
 
-IDE utilizado para compilar java y spring (Eclipse Version 2021-03 (4.19.0))
-dentro del direcorio 'todo-react-spring' esta la aplicacion de java carpeta: 'todo-1'
+IDE used to compile java and spring is (Eclipse Version 2021-03 (4.19.0)).
+Inside the directory 'todo-react-spring' is the java aplication folder named: 'todo-1'
 
-Hibernate utilizado ddl-auto = update en aplication.properties
-tanto para phpmyadmin o mysql workbench esta definido the default port 3306
--Es necesario crear la base de datos con nombre todo_app  
--ejecutar la aplicacion como Spring boot App  
+Hibernate is in ddl-auto = update in aplication.properties
+For phpmyadmin or mysql workbench the default port is 3306
+-it is necessary to create de data base named: todo_app  
+-Execute the java app like a Spring boot App  
 
-Como BD eg. si se usa xampp ((https://www.apachefriends.org/es/index.html))  
+For BD eg. if you use xampp ((https://www.apachefriends.org/es/index.html))   
 -start mysql
 
-IDE utilizado para React: Visual Studio Code
+IDE used for React: Visual Studio Code
 
 #########Heroku
 
