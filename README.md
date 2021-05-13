@@ -16,6 +16,10 @@ The @Controllers have the cors origin type of header on port 3000(react default)
 The react app use Router and It has two pages placed on the pages folder  
 I'm sorry that I couldn't style the app. I work in the mornings :)  
 
+.There are two branches on the git the  
+ ------main branch has the todo item crud only----  
+ ------folderTodo branch has the folder creation and task creation----  
+
 ###########Para usar local
 ##
 command:    git clone https://github.com/agustinsadaca/todo-react-spring.git
@@ -28,9 +32,9 @@ IDE used to compile java and spring is (Eclipse Version 2021-03 (4.19.0)).
 Inside the directory 'todo-react-spring' is the java aplication folder named: 'todo-1'
 
 Hibernate is in ddl-auto = update in aplication.properties
-For phpmyadmin or mysql workbench the default port is 3306
--it is necessary to create de data base named: todo_app  
--Execute the java app like a Spring boot App  
+For phpmyadmin(xampp Mysql) or mysql workbench the default port is 3306  
+---it is necessary to create de data base named: todo_app  
+---Execute the java app like a Spring boot App  
 
 For BD eg. if you use xampp ((https://www.apachefriends.org/es/index.html))   
 -start mysql
