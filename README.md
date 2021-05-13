@@ -20,13 +20,15 @@ I'm sorry that I couldn't style the app. I work in the mornings :)
  ------main branch has the todo item crud only----  
  ------folderTodo branch has the folder creation and task creation----  
 
-###########Para usar local
+###########Run localy
 ##
 command:    git clone https://github.com/agustinsadaca/todo-react-spring.git
 ##
 Dowload nome_modules 
 Inside directory 'todo-react-spring'  execute
 command:    npm i 
+run react command: npm start
+IDE used for React: Visual Studio Code
 
 IDE used to compile java and spring is (Eclipse Version 2021-03 (4.19.0)).
 Inside the directory 'todo-react-spring' is the java aplication folder named: 'todo-1'
@@ -39,7 +41,7 @@ For phpmyadmin(xampp Mysql) or mysql workbench the default port is 3306
 For BD eg. if you use xampp ((https://www.apachefriends.org/es/index.html))   
 -start mysql
 
-IDE used for React: Visual Studio Code
+
 
 #########Heroku
 
