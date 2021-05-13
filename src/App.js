@@ -1,58 +1,24 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState,Component } from 'react';
 import './App.css';
 import TodoItem from './component/TodoItem';
+import {BrowserRouter as Router,Route,Switch,Link,Redirect} from "react-router-dom";
+import { render } from '@testing-library/react';
+import MainPage from "./pages";
+import TodoList from "./pages/TodoList";
 
-function App() {
+class App extends Component{
 
-  const [todoItems,setTodoItems] = useState(null)
-  useEffect(() => {
-  if (!todoItems) {  
-    fetch('http://localhost:8080/todo')
-    .then(response => response.json())
-    .then(todoItems =>{
-      console.log(todoItems);
-      setTodoItems(todoItems)
-    });
-  }
-  },[todoItems]);
-  function addTask(){
-    const enteredName = prompt('Please enter a task name')
-    if(!enteredName){
-    
-    }else{
-      var item ={
-        "done":false,
-        "task":enteredName
-      }
-      fetch(`http://localhost:8080/todo`,{
-        method:'POST',
-        dataType: 'jsonp',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body:JSON.stringify(item)
-      })
-      .then(response => response.json())
-      .then(item =>setTodoItems([...todoItems,item]))
-    }
-  }
-  function handleDeleteTodoItem(item) {
-    const updateTodoItems = todoItems.filter((aItem) => aItem.id !== item.id);
-    setTodoItems([...updateTodoItems]);
-  }
- 
+  render(){
   return (
-    <div className="App">
-      <h1>Todo App</h1>
-      <button onClick={addTask}>Add task</button>
-      {todoItems ? todoItems.map((todoItem) => {
-        return( <TodoItem key={todoItem.id} data={todoItem} emitDeleteTodoItem={handleDeleteTodoItem} ></TodoItem>
-        );  
-      })
-      :"Loading"}
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={MainPage}/>
+        <Route exact path="/tasks/" component={TodoList}/>
+        <Route component={TodoList}/>
+      </Switch>
+    </Router>  
   );
+  }
 }
 
 export default App;

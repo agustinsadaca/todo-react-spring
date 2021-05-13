@@ -10,7 +10,7 @@ import com.example.demo.model.Todo;
 @Repository
 public interface TodoRepository extends CrudRepository<Todo, Long>{
 
-	public abstract ArrayList<Todo> findBytask(String task);
+	public abstract ArrayList<Todo> findByFolderId(Long folderId);
 		
 	
 }

@@ -15,17 +15,17 @@ public class Todo {
     private Long id;
     private String task;
     private boolean done;
-    private Long id_folder;
+    private Long folderId;
 
    
 	protected Todo() {
 
     }
-    public Todo(long id, String task, boolean done,Long id_folder ) {
+    public Todo(long id, String task, boolean done,Long folderId ) {
         this.id = id;
         this.task = task;   
         this.done = done;
-        this.id_folder=id_folder;
+        this.folderId=folderId;
     }
 
     public void setId(Long id) {
@@ -42,8 +42,8 @@ public class Todo {
         this.done = done;
     }
     
-    public void setId_folder(Long id_folder) {
-		this.id_folder = id_folder;
+    public void setfolderId(Long folderId) {
+		this.folderId = folderId;
 	}
 
     public Long getId() {
@@ -61,8 +61,8 @@ public class Todo {
         return done;
     }
     
-    public Long getId_folder() {
-		return id_folder;
+    public Long getfolderId() {
+		return folderId;
 	}
 	
 

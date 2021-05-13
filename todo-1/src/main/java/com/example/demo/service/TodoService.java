@@ -13,10 +13,6 @@ import com.example.demo.model.TodoRepository;
 public class TodoService {
 	@Autowired
 	TodoRepository todoRepository;
-//	private TodoRepository todoRepo;
-//	public List<TodoItem> fetchAllTodoItems(){
-//		return todoRepo.fetchAllTodoItems();
-//	}
 	public ArrayList<Todo> getAllTasks(){
 		return (ArrayList<Todo>) todoRepository.findAll();
 	}
@@ -26,8 +22,8 @@ public class TodoService {
 	public Optional<Todo> getById(Long id){
 		return todoRepository.findById(id);
 	}
-	public ArrayList<Todo> getByTask(String task){
-		return todoRepository.findBytask(task);
+	public ArrayList<Todo> getByFolder(Long id_folder){
+		return todoRepository.findByFolderId(id_folder);
 	}
 	public boolean deleteTask(Long id) {
 		try {

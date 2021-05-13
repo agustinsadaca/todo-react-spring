@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Todo;
@@ -36,6 +37,11 @@ public Todo saveTodo(@RequestBody Todo todo) {
 public Optional<Todo> getTaskById(@PathVariable("id") Long id){
 	return this.todoService.getById(id);
 }
+@GetMapping("/query")
+public ArrayList<Todo> getByFolder(@RequestParam("id_folder") Long id_folder){
+	return this.todoService.getByFolder(id_folder);
+}
+
 @DeleteMapping(path = "/{id}")
 public String deleteById(@PathVariable("id") Long id){
 	boolean ok= this.todoService.deleteTask(id);
