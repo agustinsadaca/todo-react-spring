@@ -19,7 +19,7 @@ import com.example.demo.model.FolderTodo;
 import com.example.demo.service.FolderTodoService;
 
 @RestController
-@CrossOrigin(origins = "https://kind-sinoussi-ed84ae.netlify.app")
+@CrossOrigin(origins = "https://affectionate-mcclintock-9c975e.netlify.app/")
 @RequestMapping("/folder")
 public class FolderTodoController {
 @Autowired	
