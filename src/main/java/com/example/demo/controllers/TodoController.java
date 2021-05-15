@@ -19,7 +19,7 @@ import com.example.demo.model.Todo;
 import com.example.demo.service.TodoService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://kind-sinoussi-ed84ae.netlify.app")
 @RequestMapping("/todo")
 public class TodoController {
 @Autowired	
